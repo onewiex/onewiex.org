@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="busd" transform="translate(0.5 0.5)">
+    <path d="M21 42C9.40202 42 0 32.598 0 21C0 9.40202 9.40202 0 21 0C32.598 0 42 9.40202 42 21C42 32.598 32.598 42 21 42Z" id="Path" fill="none" stroke="#F1BB0C" stroke-width="1" />
+    <path d="M28.5159 19.5464L30.9861 22.0761L21.0159 32.0464L18.5457 29.5761L28.5159 19.5464ZM24.7658 15.7964L27.2361 18.3262L17.2658 28.2964L14.7956 25.8261L24.7658 15.7964ZM13.5159 19.5464L15.9861 22.0762L13.5159 24.5464L11.0456 22.0762L13.5159 19.5464ZM21.0159 12.0464L23.4861 14.5761L17.2658 20.7964L14.7956 18.3262L21.0159 12.0464Z" id="Shape" fill="#FFFEFC" stroke="none" />
+  </g>
+</svg>

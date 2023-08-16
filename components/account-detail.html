@@ -1,0 +1,344 @@
+<div class="cab-content">
+  <ng-component>
+    <div class="cab-title">Account</div>
+    <div class="m-text gray">
+      <p>Your daily profit statistics for all open deposit plans</p>
+    </div>
+    <div class="cab-chart__wrap">
+      <img title="onewiex" src="assets/img/empty-chart.png" alt="onewiex" />
+      <div class="cab-chart__info">
+        <img title="onewiex" src="assets/img/warn.svg" alt="onewiex" />
+        <p>No data available, open Deposit or Invite friends</p>
+      </div>
+    </div>
+
+    <account-dash-calc>
+      <div class="cab-calc">
+        <div class="calc-icon">
+          <img title="onewiex" src="assets/img/calc-icon.svg" alt="onewiex" />
+        </div>
+        <div class="calc-text"><h3>Calculation</h3></div>
+        <div class="m-input__title">Investing period days</div>
+
+        <div class="m-radio">
+          <label class="active"><span>16</span></label>
+          <label><span>24</span></label>
+          <label><span>34</span></label>
+          <label><span>46</span></label>
+          <label><span>52</span></label>
+          <label><span>100</span></label>
+          <label><span>200</span></label>
+          <label><span>360</span></label>
+        </div>
+
+        <div class="cab-calc__wrap">
+          <div class="m-input__head">
+            <div class="m-input__title">Investing amount</div>
+            <div class="m-input__title">min 50 - max 1,000 USD</div>
+          </div>
+          <div class="m-input mb">
+            <input
+              type="text"
+              maxlength="18"
+              placeholder="0.00"
+              class="ng-untouched ng-pristine ng-valid"
+            /><span>USD</span>
+          </div>
+        </div>
+        <div class="calc-info mt-5">
+          <div class="calc-info__item">
+            <p>Deposit term:</p>
+            <span>16 days</span>
+          </div>
+          <div class="calc-info__item">
+            <p>Daily interest:</p>
+            <span>1.13%</span>
+          </div>
+          <div class="calc-info__item">
+            <p>Currency:</p>
+            <span>USD</span>
+          </div>
+          <div class="calc-info__item">
+            <p>Daily profit:</p>
+            <span>0.56</span>
+          </div>
+          <div class="calc-info__item">
+            <p>Total profit:</p>
+            <span>59.04</span>
+          </div>
+        </div>
+        <div class="cab-text__wrap">
+          <div class="m-text sm">
+            <p>
+              We provide a wide range of financial services in the global market
+              using advance technologies and innovations in the field trading
+              based on unique trading strategies
+            </p>
+          </div>
+          <a class="m-btn" onclick="addFund()">Open deposit</a>
+        </div>
+      </div>
+    </account-dash-calc>
+
+    <account-referral-stats>
+      <div class="cab-title__head">
+        <div class="cab-subtitle">Referral statistics</div>
+        <div id="stat-nav" class="cab-plans__nav">
+          <div
+            class="swiper-button-prev swiper-button-disabled swiper-button-lock"
+            tabindex="-1"
+            role="button"
+            aria-label="Previous slide"
+            aria-controls="swiper-wrapper-ef47243d7afc714c"
+            aria-disabled="true"
+          >
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#arrow-2"></use>
+            </svg>
+          </div>
+          <div
+            class="swiper-button-next swiper-button-lock swiper-button-disabled"
+            tabindex="-1"
+            role="button"
+            aria-label="Next slide"
+            aria-controls="swiper-wrapper-ef47243d7afc714c"
+            aria-disabled="true"
+          >
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#arrow-2"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="cab-stat">
+        <div
+          class="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+        >
+          <div
+            class="swiper-wrapper"
+            id="swiper-wrapper-ef47243d7afc714c"
+            aria-live="off"
+            style="transform: translate3d(0px, 0px, 0px)"
+          >
+            <div
+              class="swiper-slide swiper-slide-active"
+              role="group"
+              aria-label="1 / 3"
+              style="width: 244px; margin-right: 28px"
+            >
+              <div class="cab-stat__item">
+                <img
+                  title="onewiex"
+                  src="assets/img/cab-stat-2.svg"
+                  alt="onewiex"
+                />
+                <h3>Partners active / total</h3>
+                <p>0 <span>/ 0</span></p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide swiper-slide-next"
+              role="group"
+              aria-label="2 / 3"
+              style="width: 244px; margin-right: 28px"
+            >
+              <div class="cab-stat__item">
+                <img
+                  title="onewiex"
+                  src="assets/img/cab-stat-1.svg"
+                  alt="onewiex"
+                />
+                <h3>Total deposited</h3>
+                <div class="cab-select">
+                  <div class="cab-select__box">
+                    <p>0 <span>USD</span></p>
+                    <svg>
+                      <use xlink:href="assets/img/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="cab-select__hide">
+                    <div class="cab-select__item">
+                      <img
+                        title="onewiex"
+                        alt="onewiex"
+                        src="assets/img/usd-color.svg"
+                      />
+                      US Dollar
+                      <span class="text-upper">usd</span>
+                    </div>
+                    <div class="cab-select__item">
+                      <img
+                        title="onewiex"
+                        alt="onewiex"
+                        src="assets/img/btc-color.svg"
+                      />
+                      Bitcoin
+                      <span class="text-upper">btc</span>
+                    </div>
+                    <div class="cab-select__item">
+                      <img
+                        title="onewiex"
+                        alt="onewiex"
+                        src="assets/img/eth-color.svg"
+                      />
+                      Ethereum
+                      <span class="text-upper">eth</span>
+                    </div>
+                    <div class="cab-select__item">
+                      <img
+                        title="onewiex"
+                        alt="onewiex"
+                        src="assets/img/ltc-color.svg"
+                      />
+                      Litecoin
+                      <span class="text-upper">ltc</span>
+                    </div>
+                    <div class="cab-select__item">
+                      <img
+                        title="onewiex"
+                        alt="onewiex"
+                        src="assets/img/sol-color.svg"
+                      />
+                      Solana
+                      <span class="text-upper">sol</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              role="group"
+              aria-label="3 / 3"
+              style="width: 244px; margin-right: 28px"
+            >
+              <div class="cab-stat__item">
+                <img
+                  title="onewiex"
+                  src="assets/img/cab-stat-3.svg"
+                  alt="onewiex"
+                />
+                <h3>Total commission</h3>
+                <div class="cab-select">
+                  <div class="cab-select__box">
+                    <p>0 <span>USD</span></p>
+                    <svg>
+                      <use xlink:href="assets/img/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="cab-select__hide">
+                    <div class="cab-select__item">
+                      <img
+                        title="onewiex"
+                        alt="onewiex"
+                        src="assets/img/usd-color.svg"
+                      />
+                      US Dollar
+                      <span class="text-upper">usd</span>
+                    </div>
+                    <div class="cab-select__item">
+                      <img
+                        title="onewiex"
+                        alt="onewiex"
+                        src="assets/img/btc-color.svg"
+                      />
+                      Bitcoin
+                      <span class="text-upper">btc</span>
+                    </div>
+                    <div class="cab-select__item">
+                      <img
+                        title="onewiex"
+                        alt="onewiex"
+                        src="assets/img/eth-color.svg"
+                      />
+                      Ethereum
+                      <span class="text-upper">eth</span>
+                    </div>
+                    <div class="cab-select__item">
+                      <img
+                        title="onewiex"
+                        alt="onewiex"
+                        src="assets/img/ltc-color.svg"
+                      />
+                      Litecoin
+                      <span class="text-upper">ltc</span>
+                    </div>
+                    <div class="cab-select__item">
+                      <img
+                        title="onewiex"
+                        alt="onewiex"
+                        src="assets/img/sol-color.svg"
+                      />
+                      Solana
+                      <span class="text-upper">sol</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span
+            class="swiper-notification"
+            aria-live="assertive"
+            aria-atomic="true"
+          ></span>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="cab-stat__item cab-stat__item-long">
+              <img
+                title="onewiex"
+                src="assets/img/cab-stat-4.svg"
+                alt="onewiex"
+              />
+              <div class="item-text">
+                <h3>Structural turnover</h3>
+                <div class="cab-select__box">
+                  <p>0 <span>USD</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="cab-stat__item cab-stat__item-long">
+              <img
+                title="onewiex"
+                src="assets/img/cab-stat-5.svg"
+                alt="onewiex"
+              />
+              <div class="item-text">
+                <h3>Structural commission</h3>
+                <div class="cab-select__box">
+                  <p>0 <span>USD</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </account-referral-stats>
+
+    <account-partners-empty>
+      <div class="cab-refs__empty">
+        <img title="onewiex" src="assets/img/refs-img.svg" alt="onewiex" />
+        <div class="cab-refs__empty-box">
+          <img title="onewiex" src="assets/img/warn.svg" alt="onewiex" />
+          <h3>There is no information about your partners here yet</h3>
+          <p>You do not currently have any partners</p>
+          <p>Here will be displayed all information about your partners.</p>
+          <p>
+            To display the history of your partners, you need to invite at least
+            one person who will use your referral link
+          </p>
+          <div class="cab-refs__empty-btns">
+            <a onclick="handleLinkClick('add-funds-link')" class="m-btn sm tr"
+              >Copy Referral Link</a
+            >
+          </div>
+        </div>
+      </div>
+    </account-partners-empty>
+  </ng-component>
+</div>

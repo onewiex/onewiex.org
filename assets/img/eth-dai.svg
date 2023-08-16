@@ -1,0 +1,42 @@
+<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="y9ik9xn6ua">
+            <path d="M1920 0v4776H0V0h1920z"/>
+        </clipPath>
+        <clipPath id="assaeo2lpb">
+            <path d="M8.26 0c5.514 0 10 4.487 10 10s-4.486 10-10 10H1.305A1.314 1.314 0 0 1 0 18.696V1.304C0 .591.591 0 1.304 0h6.957zm0 2.609H2.61V17.39H8.26c4.07 0 7.391-3.321 7.391-7.391S12.33 2.609 8.261 2.609z"/>
+        </clipPath>
+        <clipPath id="72z4tdeoec">
+            <path d="M22.244 0c.713 0 1.304.591 1.304 1.304 0 .713-.591 1.305-1.304 1.305H1.304A1.314 1.314 0 0 1 0 1.304C0 .591.591 0 1.304 0h20.94z"/>
+        </clipPath>
+        <clipPath id="gkuug96d3d">
+            <path d="M22.244 0c.713 0 1.304.591 1.304 1.304 0 .713-.591 1.305-1.304 1.305H1.304A1.314 1.314 0 0 1 0 1.304C0 .591.591 0 1.304 0h20.94z"/>
+        </clipPath>
+        <clipPath id="6bj6ob0ate">
+            <path d="M18 0a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h16z"/>
+        </clipPath>
+        <clipPath id="8iwwwkl1af">
+            <path d="M8.127 7.377 4.062 13 0 7.377l4.062 2.358 4.065-2.358zM4.062 0l4.061 6.62-4.06 2.36L0 6.62 4.062 0z"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#y9ik9xn6ua)" transform="translate(-821 -2939)">
+        <path d="M843 2982c-11.598 0-21-9.402-21-21s9.402-21 21-21 21 9.402 21 21-9.402 21-21 21z" stroke="#F1BB0B" fill="none" stroke-miterlimit="10"/>
+        <g clip-path="url(#assaeo2lpb)" transform="translate(835.373 2951.25)">
+            <path fill="#FFF" d="M0 0h18.26v20H0V0z"/>
+        </g>
+        <g clip-path="url(#72z4tdeoec)" transform="translate(832.73 2956.467)">
+            <path fill="#FFF" d="M0 0h23.548v2.609H0V0z"/>
+        </g>
+        <g clip-path="url(#gkuug96d3d)" transform="translate(832.73 2963.424)">
+            <path fill="#FFF" d="M0 0h23.548v2.609H0V0z"/>
+        </g>
+        <g>
+            <g clip-path="url(#6bj6ob0ate)" transform="translate(843 2962)">
+                <path fill="#F1BB0B" d="M0 0h20v20H0V0z"/>
+                <g clip-path="url(#8iwwwkl1af)" transform="translate(6 3)">
+                    <path fill="#151618" d="M0 0h8.127v13H0V0z"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
