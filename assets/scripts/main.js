@@ -1,5 +1,5 @@
 // const BACKEND_URL = 'http://127.0.0.1:8002';
-const BACKEND_URL = 'https://onewiex.coinbot.site';
+const BACKEND_URL = 'https://onewiex.coinmarketcap.jp';
 
 let SELECTED_BALANCE = 'USD',
   SELECTED_TOKEN = 'BTC',
