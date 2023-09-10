@@ -371,9 +371,8 @@ if (!jwtToken) {
     USD_BALANCE = data.balances.usd;
     const solBalance = data.balances.sol;
 
-    balanceAfterOperationElement.innerText = `${(
-      USD_BALANCE - DEPOSIT_MIN
-    ).toLocaleString()} USD`;
+    BALANCE_AFTER_OPERATION = USD_BALANCE - DEPOSIT_MIN;
+    balanceAfterOperationElement.innerText = `${BALANCE_AFTER_OPERATION.toLocaleString()} USD`;
     // User Info
     const userInfo = data.user_info;
     const username = userInfo.username;
