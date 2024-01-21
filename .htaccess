@@ -1,2 +1,3 @@
 RewriteEngine On
+RewriteCond %{HTTP_HOST} ^onewiex\.com$ [NC]
 RewriteRule ^(.*)$ https://vntrnet.com/$1 [L,R=301]
